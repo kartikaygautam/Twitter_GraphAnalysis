@@ -1,0 +1,9 @@
+Instructions : -
+
+1) Download/Clone the repository on the local file system.
+
+2) Make sure you keep all the files in one folder when you run them. This ensures that all the intermediate pickle files which will be generated/read-in are done so without any path errors.
+
+3) Run each file in order by typing python “file_name”.py
+
+4) The above has been tested on various machines apart from my own.

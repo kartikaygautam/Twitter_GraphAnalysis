@@ -1,0 +1,60 @@
+
+				OBJECTIVES : -
+
+Were largely 3-Fold.
+
+1) The first objective is to study if and how unsupervised learning could aid in the process of supervised learning.
+
+2) The second objective is to generate preliminary information that could further help predict links b/w users.
+
+3) A third objective was to corroborate the importance of feature engineering in data science applications.
+
+
+			   WORKFLOW & MOTIVATIONS : -
+
+1) N number of tweets for N distinct users are collected using a certain query string - here ‘TRUMP’. N was chosen as as to accommodate the timing restraints on the part of the examiner and to best fit the api. 
+
+2) Each of the tweets is then fed through a feature engineering procedure wherein we use the lexical approach similar to the one used in class to convert the raw data into vector with features as word count, digram counts added positive word counts, positive score, negative word counts, negative scores and the objective score
+
+3) The aim was to construct a lexical model similar in class so as to best discover two clusters each corresponding two the polar classes in sentiment analysis. ( Ignoring the neutral class to reduce complexity )
+
+4) The motivations behind this approach was to feed this data into a clustering algorithm, here k-means, with an expected number of clusters = 2 so as to divide the tweets and subsequently the unique users into two groups each corresponding to the sentiment they expressed towards trump, by capturing the similarity of data points within themselves.
+
+5) The data is then fed into a k-means algorithm with k = 2. This results in two clusters with an expectation that one would have more positive instances and the other negative instances. Results showed that the ‘majority’ of the instances of each cluster were consistent with this expectation,
+
+6) However, several algorithmic runs also showed mixed results.
+
+7) The next step was to use the labels generated in the clustering and the tweets collected as the training data for our classifier.
+
+8) The motivations behind this was that the next step involves getting a set of unique test users and the tweets they made about trump ( not present in our training set ), not collected for our step 1, and then find whether a particular user would fall in cluster 0 or cluster 1. This could be first step to a link prediction analysis wherein at least we have established similarity on the basis of similarity of what they are talking about trump. Furthermore, since a lot of tweets were also retweets, we can assume that there is some coherence in the views between two users.
+
+9) Then roughly 10% of the tweets acquired in the training step are acquired. This done for uniques users, which were also not present in the training step so as to get a new set of users and thereby classifying them into one of the clusters so as to work towards possible link prediction b/w these new users and the users present in the cluster.
+
+10) Using the training data generated after the clustering step, we use logistic regression to fit our classifier into which we then feed our test data, after appropriate feature engineering, so as to classify the data.
+
+11) The last steps of the approach involve the study of these classifications and whether they actually are coherent with the majority of the instances of the cluster.
+
+12) The instances of each class is derived from the highest probability instance of the class.
+
+13) After which, we can use this preliminary coherent subset of users within each cluster to further our link prediction study.
+
+14) The classifications results were again mixed. Although fairly large subsets of true classifications were present, results were subject to the kind of tweets fetched, and whether there were clear separation of sentiments within each tweet.
+
+
+			       CONCLUSIONS
+
+1) Although majority of the times running the algorithms resulted in fairly large subsets of coherent users in a cluster, still it was evident how important feature selection is to have a more accurate algorithm.
+
+2) If feature engineering is done more appropriately i think unsupervised learning could actually aid in the application of supervised learning. TFIDF measures for example would definitely result in a more accurate set of results, but the aim was also to see how the simple approach we used in class coupled with some added features would affect our analysis.
+
+3) Also the amount of training data collected greatly influenced the analysis. Since collecting more data resulted in a higher dimensionality data, it becomes difficult to classify each doc accurately. Again due to certain time restrictions we only tested for small values. This, although, seems a bad practice in terms of training our classifier, however, since our clustering involved similarity of data points within themselves and the classification involved how similar each new instance was to each cluster, we can still omit the fact the a lot of data was not collected, since all we are talking about here is relative similarity as opposed to absolute measures.
+
+4) Although mixed results were generated when aggregated over a large number of iterations, this was only obvious as the approach towards sentiment analysis failed to incorporate the various subtleties present in the way humans express sentiments towards different scenarios/people etc.
+
+5) Our features were only limited by the various combinations of the feature functions that we used in the example in class. Therefore, i was limited by the way i could study the ways in which feature engineering could be done.
+
+6) However, less restraints and more in depth analysis could result in more accurate results.
+
+7) This approach alone cannot be used to predict links but can be used as a first step analysis of the for link predictions.
+
+8) Sentiment analysis a tricky subject, confirmed :)

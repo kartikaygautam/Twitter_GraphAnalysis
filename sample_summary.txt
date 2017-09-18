@@ -1,0 +1,12 @@
+Number of users collected: 2002
+Number of messages collected: 2002
+Number of communities discovered: 2
+Number of users in community 0: 1646
+Number of users in community 1: 356
+Average number of users per community: 1001.0
+Number of users in class 0: 166
+Number of users in class 1: 34
+Instance of class 0: RT @PrisonPlanet: Mexican gang members &amp; thugs destroy Trump effigy at Guns N' Roses concert.
+
+Wall just got 10 feet higher. https://t.co/1…: : User: super 4 bowl®
+Instance of class 1: RT @WendyRWeiser: Voting rights advocates brace for ‘biggest fight of our lifetime’ during Trump administration https://t.co/yL60yBdtyL: : User: Robin Tryloff
