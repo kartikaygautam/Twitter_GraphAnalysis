@@ -6,10 +6,10 @@ from collections import Counter, defaultdict
 from itertools import chain, combinations
 
 
-consumer_key = 'S7dTDmh9WwS1cpc1o61jnUMFt'
-consumer_secret = 'StUMVhQxmG1h0DWcffPIHIWaENP0nO5axtyqjgC4yXbZD4s6d2'
-access_token = '770282168664911872-mpw8Ds0JkB9c3GwziL6XRLWUwrlpVMM'
-access_token_secret = 'mDOzfcW7FTsuT0u6kV8H9FP8b3B71cDrs8bT3YrHK1bi1'
+consumer_key = ''
+consumer_secret = ''
+access_token = ''
+access_token_secret = ''
 
 def get_twitter():
 
